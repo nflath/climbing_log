@@ -1,0 +1,11 @@
+<ul>
+{% if current_location == location %}
+   <b> {% include "location_list_title.html" %} </b>
+{% else %}
+  {% include "location_list_title.html" %}
+{% endif %}
+
+{% for location in location.child_location.get_queryset %}
+  {% include "navigation_inner.html" %}
+{% endfor %}
+</ul>

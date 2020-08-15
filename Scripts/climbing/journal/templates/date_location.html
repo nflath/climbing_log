@@ -1,0 +1,11 @@
+<li> {{location.name}}
+{% for note in location.notes %}
+<b>{{note.content}} </b>
+{% endfor %}
+
+<ul>
+{% for location in location.children %}
+{% include "date_location.html" %}
+{% endfor %}
+</ul>
+</li>

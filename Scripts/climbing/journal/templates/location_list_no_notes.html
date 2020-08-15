@@ -1,0 +1,6 @@
+<li> <a href="{% url 'journal:log_by_location' location.id %}"> {{location.name}} </a> </li>
+<ul>
+  {% for location in location.child_location.get_queryset %}
+  {% include "location_list_no_notes.html" %}
+{% endfor %}
+</ul>

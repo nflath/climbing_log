@@ -1,0 +1,10 @@
+<ul>
+{% for date, root_locations in notes_collected %}
+<li> {{date}} </li>
+<ul>
+{% for location in root_locations %}
+{% include "date_location.html" %}
+{% endfor %}
+</ul>
+{% endfor %}
+</ul>

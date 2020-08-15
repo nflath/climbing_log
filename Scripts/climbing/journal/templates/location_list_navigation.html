@@ -1,0 +1,6 @@
+{% include "location_list_title.html" %}
+<ul>
+  {% for location in location.child_location.get_queryset %}
+  {% include "location_list_no_notes.html" %}
+{% endfor %}
+</ul>

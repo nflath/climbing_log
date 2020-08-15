@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.split {
+  z-index: 1;
+  top: 0;
+  padding-top: 20px;
+}
+.left {
+  float: left
+}
+.right {
+    width: 70%;
+    background-color: #ffffff;
+}
+body {
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<table>
+  <tr>
+    <td class = "split left">
+      <div>
+        {% include "navigation.html" %}
+      </div>
+    </td>
+    <td  class = "split right">
+      <div>
+        <ul>
+          {% include "location_list_inner.html" %}
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

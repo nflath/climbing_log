@@ -1,0 +1,11 @@
+{% include "location_list_title.html" %}
+  <ul>
+  {% for note in location.notes.get_queryset %}
+      <li> <b> {{note.date}} </b> - {{note.content}} </li>
+  {% endfor %}
+  </ul>
+  <ul>
+{% for location in location.child_location.get_queryset %}
+{% include "location_list_single.html" %}
+{% endfor %}
+</ul>
